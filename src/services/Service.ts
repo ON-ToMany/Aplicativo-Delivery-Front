@@ -2,11 +2,11 @@ import axios from "axios";
 
 const api = axios.create({baseURL:"sads"})
 
-  // logica de ordem
+// logica de ordem
 
 //const Filtragem_Saudavel = ()=>{
 //const categoriasOrdenadas = [...categoria].sort((a: Categoria, b: Categoria) => 
-  //a.nutri_score.localeCompare(b.nutri_score)
+//a.nutri_score.localeCompare(b.nutri_score)
 //);
 //}
 
@@ -17,8 +17,6 @@ const resposta = await api.get(url)
 
 
 setDados(resposta.data)
-
-
 
 
 }

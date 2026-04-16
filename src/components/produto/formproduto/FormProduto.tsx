@@ -1,7 +1,7 @@
 import { useEffect, useState, type ChangeEvent } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { atualizar, criar, Listar } from "../../../services/Service";
-import type Produto from "../../../models/Produto";
+import type { Produto } from "../../../models/Produto";
 
 export function FormProduto() {
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ export function FormProduto() {
     proteina: 0,
     frutas_vegetais_percentual: 0,
     nutri_score: "A",
-    usuario: null,
+    // usuario: null,
     categoria: null,
   });
 
@@ -54,6 +54,5 @@ export function FormProduto() {
   }
 
   return 
-   
   
 }

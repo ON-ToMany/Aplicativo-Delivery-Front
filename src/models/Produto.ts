@@ -1,4 +1,6 @@
-export default interface Produto {
+import type { Categoria } from "./Categoria";
+
+export interface Produto {
   id: number;
   nome: string;
   descricao_Alimentar: string;
@@ -11,6 +13,6 @@ export default interface Produto {
   proteina: number;
   frutas_vegetais_percentual: number;
   nutri_score: string;
-  usuario: Usuario | null;
+  // usuario: Usuario | null;
   categoria: Categoria | null;
 }

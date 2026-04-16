@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { deletar, Listar } from "../../../services/Service";
-import type Produto from "../../../models/Produto";
+import type { Produto } from "../../../models/Produto";
 
 export function DeletarProduto() {
   const [produto, setProduto] = useState<Produto>({} as Produto);
