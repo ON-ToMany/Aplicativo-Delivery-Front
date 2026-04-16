@@ -10,7 +10,7 @@ function App() {
         <Route path="/sobre" element={<Sobre />} />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
 export default App;
