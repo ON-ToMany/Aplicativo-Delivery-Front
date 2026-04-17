@@ -7,7 +7,7 @@ import {
 } from "react-icons/ri";
 
 const Footer = () => (
-  <footer className="bg-red-950 text-white pt-10 pb-7 px-12 rounded-t-3xl">
+  <footer className="relative 1 bg-red-950 text-white pt-10 pb-7 px-12 rounded-t-3xl">
     <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
       <div className="md:col-span-2">
         <div className="flex items-center gap-3 mb-4">
