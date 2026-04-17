@@ -1,4 +1,3 @@
-import { RiUserFill } from "react-icons/ri";
 import Logo from "../../assets/images/logo.svg";
 import { Link } from "react-router-dom";
 
