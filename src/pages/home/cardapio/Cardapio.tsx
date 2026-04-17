@@ -4,6 +4,7 @@ import Pratos from '../../../assets/images/pratos/pratos';
 
 
 
+
 interface Prato {
   id: number;
   nome: string;
@@ -41,13 +42,41 @@ const pratos: Prato[] = [
     nutreScore: "A",
     imagem: Pratos.carnemoida
   },
+  {
+  id: 5,
+  nome: "Bowl Vegano de Grão-de-Bico",
+  descricao: "Grão-de-bico temperado com especiarias, acompanhado de arroz integral, abóbora assada e mix de folhas frescas.",
+  nutreScore: "A",
+  imagem: Pratos.graodebico
+},
+{
+  id: 6,
+  nome: "Lasanha de Berinjela Vegana",
+  descricao: "Lasanha de berinjela com molho de tomate caseiro, recheada com proteína de soja e finalizada com creme vegetal.",
+  nutreScore: "B",
+  imagem: Pratos.lasanhavegana
+},
+{
+  id: 7,
+  nome: "Hambúrguer Vegano de Lentilha",
+  descricao: "Hambúrguer artesanal de lentilha servido com pão integral, alface, tomate, cebola roxa e molho vegano especial.",
+  nutreScore: "B",
+  imagem: Pratos.hamburguervegano
+},
+{
+  id: 8,
+  nome: "Estrogonofe de Cogumelos Vegano",
+  descricao: "Estrogonofe cremoso de cogumelos com leite vegetal, acompanhado de arroz branco e batata palha crocante.",
+  nutreScore: "B",
+  imagem: Pratos.estrogonofevegano
+}
 ];
 
 const Cardapio: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
 
-  const totalSlides = Math.ceil(pratos.length / 2);
+  const totalSlides = Math.ceil(pratos.length / 2 );
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1 >= totalSlides ? 0 : prev + 1));
