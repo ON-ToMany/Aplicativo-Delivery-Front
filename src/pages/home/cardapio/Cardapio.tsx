@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaChevronDown } from 'react-icons/fa';
+import Pratos from '../../../assets/images/pratos/pratos';
 
 
-import Pratos  from "../../../assets/images/pratos/Pratos";
+
 interface Prato {
   id: number;
   nome: string;
@@ -45,7 +46,7 @@ const pratos: Prato[] = [
 const Cardapio: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Como exibimos 2 cards por vez, o número total de páginas (slides) é pratos.length / 2
+
   const totalSlides = Math.ceil(pratos.length / 2);
 
   const nextSlide = () => {
