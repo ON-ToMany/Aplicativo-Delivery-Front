@@ -5,7 +5,6 @@ import Footer from "./components/footer/Footer";
 import Equipe from "./pages/sobre/equipe/Equipe";
 import SobreOneToMany from "./pages/sobre/sobre-one-to-many/SobreOneToMany";
 import Sobre from "./pages/sobre/Sobre";
-import Cardapio from "./pages/home/cardapio/Cardapio";
 
 function App() {
   return (
@@ -18,10 +17,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/inicio" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />
-
             <Route path="/equipe" element={<Equipe />} />
             <Route path="/sobre-detalhes" element={<SobreOneToMany />} />
-            <Route path="/cardapio" element={<Cardapio />} />
           </Routes>
         </main>
 
