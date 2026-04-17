@@ -7,6 +7,7 @@ import SobreOneToMany from "./pages/sobre/sobre-one-to-many/SobreOneToMany";
 import Sobre from "./pages/sobre/Sobre";
 import { ListaProduto } from "./components/produto/listaproduto/ListaProduto";
 import { FormProduto } from "./components/produto/formproduto/FormProduto";
+import { DeletarProduto } from "./components/produto/deletarproduto/DeletarProduto";
 
 function App() {
   return (
@@ -24,7 +25,9 @@ function App() {
             <Route path="/gerenciar-prato" element={<ListaProduto />} />
             <Route path="/cadastrar-prato" element={<FormProduto />} />
             <Route path="/editar-prato/:id" element={<FormProduto />} />
+            <Route path="/deletar-prato/:id" element={<DeletarProduto />} />
           </Routes>
+
         </main>
 
         <Footer />

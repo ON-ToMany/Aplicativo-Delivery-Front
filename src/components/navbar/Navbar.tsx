@@ -18,12 +18,13 @@ function Navbar() {
             <li className="hover:text-red-950 transition-colors duration-200"><a href="#cardapio">Cardápio</a></li>
             <li className="hover:text-red-950 transition-colors duration-200"><a href="#onde-estamos">Onde Estamos</a></li>
             <li className="hover:text-red-950 transition-colors duration-200"><a href="/sobre">Sobre</a></li>
+            <li className="hover:text-red-950 transition-colors duration-200"><a href="/gerenciar-prato">Gerenciar Pratos</a></li>
+            <li className="hover:text-red-950 transition-colors duration-200"><a href="/gerenciar-categoria">Gerenciar Categoria</a></li>
           </ul>
         </nav>
 
         <div className="w-fit h-fit flex felx-row gap-4 items-center">
           <button className="w-fit p-2 border border-red-900 bg-yellow-50 rounded-full shadow-sm font-medium cursor-pointer text-nowrap hover:border-red-950 hover:text-red-950 hover:scale-103 transition-all duration-200">Faça seu pedido</button>
-          <button className="w-full h-full rounded-full bg-red-900 text-yellow-50 text-2xl p-2 cursor-pointer hover:bg-red-950 hover:scale-103 transition-all  duration-200 "><RiUserFill /></button>
         </div>
       </div>
     </>
