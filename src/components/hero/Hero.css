@@ -1,0 +1,39 @@
+.first-letter {
+  color: #9F0712; 
+}
+
+.btn-donate {
+  background-color: #E6C097; 
+  color: #991B1B;            
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 800;         
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-location {
+  background-color: #FF0000; 
+  color: #FFFFFF; 
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-donate:hover, .btn-location:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.hero-subtitle {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 400px;
+  line-height: 1.4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+}

@@ -8,7 +8,10 @@ import Sobre from "./pages/sobre/Sobre";
 import { ListaProduto } from "./components/produto/listaproduto/ListaProduto";
 import { FormProduto } from "./components/produto/formproduto/FormProduto";
 import { DeletarProduto } from "./components/produto/deletarproduto/DeletarProduto";
+import GerenciarCategorias from "./components/categorias/gerenciar-categorias/GerenciarCategorias";
+import FormCategoria from "./components/categorias/formcategoria/FormCategoria";
 
+  
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +29,9 @@ function App() {
             <Route path="/cadastrar-prato" element={<FormProduto />} />
             <Route path="/editar-prato/:id" element={<FormProduto />} />
             <Route path="/deletar-prato/:id" element={<DeletarProduto />} />
+            <Route path="/categorias" element={<GerenciarCategorias />} />
+            <Route path="/cadastrarCategoria" element={<FormCategoria />} />
+            <Route path="/editarCategoria/:id" element={<FormCategoria />} />
           </Routes>
 
         </main>

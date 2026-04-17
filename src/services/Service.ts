@@ -11,15 +11,14 @@ const api = axios.create({baseURL:"https://aplicativo-de-delivery-t7h9.onrender.
 //}
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
-export const Listar = async(url:string,setDados:Function)=>{
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const resposta = await api.get(url)
-
-
-
-setDados(resposta.data)
-
-
+export const Listar = async (url: string, setDados: Function) => {
+  try {
+    const resposta = await api.get(url)
+    setDados(resposta.data)
+  } catch (error) {
+    console.error("Erro ao listar:", error)
+    setDados([]) 
+  }
 }
 
 
