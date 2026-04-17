@@ -1,22 +1,22 @@
-import { ChangeEvent, useEffect, useState } from "react";
+import { useEffect, useState, type ChangeEvent } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { atualizar, buscar, cadastrar } from "../../../services/Service";
 import type { Categoria } from "../../../models/Categoria";
+import {  criar, atualizar, Listar } from "../../../services/Service";
 
 function FormCategoria() {
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
 
-  // Estado inicial limpo
   const [categoria, setCategoria] = useState<Categoria>({
     id: 0,
     tipo: "",
     targetAudience: "",
+    produto: [],
   });
 
   async function buscarPorId(id: string) {
     try {
-      await buscar(`/categorias/${id}`, setCategoria);
+      await Listar(`/categorias/${id}`, setCategoria);
     } catch (error) {
       console.error("Erro ao carregar a categoria:", error);
     }
@@ -59,7 +59,7 @@ function FormCategoria() {
     } else {
       try {
         const { id, ...dadosParaEnvio } = categoria;
-        await cadastrar(`/categorias`, dadosParaEnvio, setCategoria);
+        await criar(`/categorias`, dadosParaEnvio, setCategoria);
         alert("Categoria cadastrada com sucesso! ✅");
         retornar();
       } catch (error) {

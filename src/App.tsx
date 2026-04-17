@@ -6,7 +6,9 @@ import Equipe from "./pages/sobre/equipe/Equipe";
 import SobreOneToMany from "./pages/sobre/sobre-one-to-many/SobreOneToMany";
 import Sobre from "./pages/sobre/Sobre";
 import GerenciarCategorias from "./components/categorias/gerenciar-categorias/GerenciarCategorias";
-import FormCategoria from "./components/categorias/form-categoria/Categoria-Form";
+import FormCategoria from "./components/categorias/formcategoria/FormCategoria";
+
+
 
 function App() {
   return (
