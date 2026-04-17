@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api = axios.create({baseURL:"sads"})
+const api = axios.create({baseURL:"https://aplicativo-de-delivery-t7h9.onrender.com"})
 
 // logica de ordem
 
