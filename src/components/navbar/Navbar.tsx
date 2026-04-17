@@ -19,7 +19,7 @@ function Navbar() {
             <li className="hover:text-red-950 transition-colors duration-200"><a href="#onde-estamos">Onde Estamos</a></li>
             <li className="hover:text-red-950 transition-colors duration-200"><a href="/sobre">Sobre</a></li>
             <li className="hover:text-red-950 transition-colors duration-200"><a href="/gerenciar-prato">Gerenciar Pratos</a></li>
-            <li className="hover:text-red-950 transition-colors duration-200"><a href="/gerenciar-categoria">Gerenciar Categoria</a></li>
+            <li className="hover:text-red-950 transition-colors duration-200"><a href="/categorias">Gerenciar Categoria</a></li>
           </ul>
         </nav>
 

@@ -88,6 +88,7 @@ export function FormProduto() {
         await criar(`/produtos/cadastrar`, produto, setProduto);
         alert("Produto cadastrado com sucesso");
       }
+      navigate('/gerenciar-prato');
     } catch {
       alert("Erro ao salvar o Produto");
     }
