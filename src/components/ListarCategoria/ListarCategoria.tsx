@@ -1,7 +1,8 @@
 
 import { useEffect, useState } from 'react'
 import { Listar } from '../../service/service'
-import type { Categoria } from '../../model/categoria'
+import type { Categoria } from '../../models/Categoria'
+
 
 export default function ListarCategoria() {
 const[categoria,SetCategoria] =useState<Categoria[]>([])

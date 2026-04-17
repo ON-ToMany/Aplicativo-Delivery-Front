@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import {atualizar, criar, Listar } from '../../service/service'
+import type { Categoria } from '../../models/Categoria'
 
 export default function FormCategoria() {
 

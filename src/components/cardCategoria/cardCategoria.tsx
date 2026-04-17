@@ -1,7 +1,8 @@
+import type { Categoria } from "../../models/Categoria"
 
 
 interface categoriaProps{
-categoria:categoria
+categoria:Categoria
 
 
 
