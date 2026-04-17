@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaChevronDown } from 'react-icons/fa';
-import Pratos from '../../../assets/images/pratos/pratos';
-
-
-
+import Pratos from '../../../assets/images/pratos/Pratos';
 
 interface Prato {
   id: number;
