@@ -7,7 +7,7 @@ import {
 } from "react-icons/ri";
 
 const Footer = () => (
-  <footer className="bg-red-950 text-white pt-10 pb-7 px-12 rounded-t-3xl">
+  <footer className="bg-red-950 text-white pt-4 pb-5 px-12 rounded-t-3xl">
     <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
       <div className="md:col-span-2">
         <div className="flex items-center gap-3 mb-4">
@@ -55,7 +55,7 @@ const Footer = () => (
         </h4>
         <ul className="grid grid-cols-3 gap-2.5 text-center md:grid-cols-1 md:text-left">
           {[
-            { label: "Início", path: "/" },
+            { label: "Início", path: "/home" },
             { label: "Cardápio", path: "/#cardapio" },
             { label: "Onde Estamos", path: "/#localizacao" },
             { label: "Sobre", path: "/sobre" },
@@ -95,7 +95,7 @@ const Footer = () => (
     </div>
 
     {/* Divisor */}
-    <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
+    <div className="border-t border-white/10 pt-5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
       <p>
         © {new Date().getFullYear()} FriendlyFood. Todos os direitos reservados.
       </p>
