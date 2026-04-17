@@ -1,7 +1,7 @@
 import { useEffect, useState, type ChangeEvent } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import type { Categoria } from "../../../models/Categoria";
-import {  criar, atualizar, Listar } from "../../../services/Service";
+import { criar, atualizar, Listar } from "../../../services/Service";
 
 function FormCategoria() {
   const navigate = useNavigate();
@@ -50,7 +50,7 @@ function FormCategoria() {
 
     if (id !== undefined) {
       try {
-        await atualizar(`/categorias`, categoria, setCategoria);
+        await atualizar(`/categorias/atualizar`, categoria, setCategoria);
         alert("Categoria atualizada com sucesso! ✅");
         retornar();
       } catch (error) {
@@ -58,8 +58,12 @@ function FormCategoria() {
       }
     } else {
       try {
-        const { id, ...dadosParaEnvio } = categoria;
-        await criar(`/categorias`, dadosParaEnvio, setCategoria);
+        const dadosParaEnvio = {
+          tipo: categoria.tipo,
+          targetAudience: categoria.targetAudience
+        };
+
+        await criar(`/categorias/cadastrar`, dadosParaEnvio, setCategoria);
         alert("Categoria cadastrada com sucesso! ✅");
         retornar();
       } catch (error) {
