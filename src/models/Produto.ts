@@ -1,4 +1,5 @@
 import type { Categoria } from "./Categoria";
+import type { Usuario } from "./Usuario";
 
 export interface Produto {
   id: number;
@@ -13,6 +14,6 @@ export interface Produto {
   proteina: number;
   frutas_vegetais_percentual: number;
   nutri_score: string;
-  // usuario: Usuario | null;
+  usuario: Usuario | null;
   categoria: Categoria | null;
 }

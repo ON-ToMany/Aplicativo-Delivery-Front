@@ -5,6 +5,8 @@ import Footer from "./components/footer/Footer";
 import Equipe from "./pages/sobre/equipe/Equipe";
 import SobreOneToMany from "./pages/sobre/sobre-one-to-many/SobreOneToMany";
 import Sobre from "./pages/sobre/Sobre";
+import { ListaProduto } from "./components/produto/listaproduto/ListaProduto";
+import { FormProduto } from "./components/produto/formproduto/FormProduto";
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/equipe" element={<Equipe />} />
             <Route path="/sobre-detalhes" element={<SobreOneToMany />} />
+            <Route path="/gerenciar-prato" element={<ListaProduto />} />
+            <Route path="/cadastrar-prato" element={<FormProduto />} />
+            <Route path="/editar-prato/:id" element={<FormProduto />} />
           </Routes>
         </main>
 

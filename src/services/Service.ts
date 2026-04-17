@@ -16,6 +16,7 @@ export const Listar = async(url:string,setDados:Function)=>{
 const resposta = await api.get(url)
 
 
+
 setDados(resposta.data)
 
 
