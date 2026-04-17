@@ -8,30 +8,44 @@ function GerenciarCategorias() {
   const [categorias, setCategorias] = useState<Categoria[]>([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
- 
+
   async function buscarCategorias() {
-    setLoading(true);
-    await Listar("/categorias", setCategorias);
-    setLoading(false);
+    try {
+      setLoading(true);
+      
+      await Listar("/categorias", setCategorias);
+    } catch (error) {
+      console.error("Erro ao buscar categorias", error);
+    } finally {
+      setLoading(false);
+    }
   }
- 
+
   useEffect(() => {
     buscarCategorias();
   }, []);
- 
+
   async function handleDeletar(id: number) {
-    await deletar(`/categorias/${id}`);
-    await buscarCategorias();
+    try {
+      await deletar(`/categorias/${id}`);
+      
+      await buscarCategorias();
+    } catch (error) {
+      alert("Erro ao excluir a categoria.");
+    }
   }
- 
+
+  function handleEditar(id: number) {
+    navigate(`/editarCategoria/${id}`);
+  }
+
   return (
     <div className="min-h-screen bg-[#F5F5F5] pt-28 pb-16 px-8 md:px-20">
-
       <div className="flex items-center justify-between mb-10">
         <h1 className="text-4xl md:text-5xl font-black text-red-900 italic">
           Gerenciar Categorias
         </h1>
- 
+
         <button
           onClick={() => navigate("/cadastrarCategoria")}
           className="flex items-center gap-2 bg-red-900 text-[#EDD9B8] font-bold text-sm px-5 py-2.5 rounded-full shadow hover:bg-red-950 hover:scale-105 transition-all duration-200 cursor-pointer"
@@ -40,7 +54,7 @@ function GerenciarCategorias() {
           cadastrar novo
         </button>
       </div>
- 
+
       {loading ? (
         <div className="flex justify-center items-center h-48">
           <span className="text-red-900/60 text-lg font-medium animate-pulse">
@@ -59,6 +73,7 @@ function GerenciarCategorias() {
               key={cat.id}
               categoria={cat}
               onDeletar={handleDeletar}
+              onEditar={handleEditar} 
             />
           ))}
         </div>
@@ -66,4 +81,5 @@ function GerenciarCategorias() {
     </div>
   );
 }
- export default GerenciarCategorias;
+
+export default GerenciarCategorias;
