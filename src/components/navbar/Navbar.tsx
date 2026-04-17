@@ -16,7 +16,7 @@ function Navbar() {
           <ul className="flex flex-row gap-6">
             <li className="hover:text-red-950 transition-colors duration-200"><a href="/">Início</a></li>
             <li className="hover:text-red-950 transition-colors duration-200"><a href="/cardapio">Cardápio</a></li>
-            <li className="hover:text-red-950 transition-colors duration-200"><a href="/onde-estamos">Onde Estamos</a></li>
+            <li className="hover:text-red-950 transition-colors duration-200"><a href="#onde-estamos">Onde Estamos</a></li>
             <li className="hover:text-red-950 transition-colors duration-200"><a href="/sobre">Sobre</a></li>
           </ul>
         </nav>
