@@ -2,6 +2,7 @@ import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import Pin from "../../../assets/icons/pin.svg";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import  Titulo  from "../../../components/titulo/Titulo";
 
 // Coordenadas do local onde está o foodtruck (exemplo: Rio de Janeiro) 
 const localizacao: [number, number] = [-22.9068, -43.1729]; 
@@ -16,7 +17,7 @@ const icon = L.icon({
 function OndeEstamos() {
   return (
     <div className="flex-col w-full h-screen flex justify-center px-28 py-16 gap-8">
-      <h2 className="text-5xl font-black text-red-900">ONDE ESTAMOS</h2>
+      <Titulo titulo="ONDE ESTAMOS" />
 
       <div className="w-full h-full border-4 border-red-900 rounded-xl overflow-hidden ">
         {/* Container do mapa, centraliza na tela a localização definida na const localizacao; zoom do mapa */}
