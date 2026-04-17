@@ -2,16 +2,26 @@ import axios from "axios";
 
 const api = axios.create({baseURL:"sads"})
 
-
+  // logica de ordem
+//const Filtragem_Saudavel = ()=>{
+//const categoriasOrdenadas = [...categoria].sort((a: Categoria, b: Categoria) => 
+  //a.nutri_score.localeCompare(b.nutri_score)
+//);
+//}
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export const Listar = async(url:string,setDados:Function)=>{
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const resposta = await api.get(url)
 
+
 setDados(resposta.data)
 
+
+
+
 }
+
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export const criar = async(url:string,dados:object,setDados:Function)=>{
@@ -31,8 +41,11 @@ export const atualizar = async(url:string,dados:object,setDados:Function)=>{
 }
 
 
-export const deletar = async(url:string)=>{
+export const deletarCategoria = async(url:string)=>{
 await api.delete(url)
 
 
 }
+
+
+
